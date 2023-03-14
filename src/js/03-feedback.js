@@ -9,7 +9,6 @@ const formData = {
     message: '',
 };
 
-
 formEl.addEventListener('input', throttle(handleFormElMessage, 500))
 formEl.addEventListener('submit', handleFormSubmit)
 
@@ -17,7 +16,6 @@ populateTextarea();
 
 function handleFormElMessage(e) {
     formData[e.target.name] = e.target.value;
-    console.log(formData)
     localStorage.setItem('feedback-form-state', JSON.stringify(formData));
 }
 
